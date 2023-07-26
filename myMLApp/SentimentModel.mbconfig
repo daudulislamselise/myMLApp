@@ -1,0 +1,252 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "F:\\Selise_Office\\Machine Learning\\sentiment labelled sentences\\sentiment labelled sentences\\yelp_labelled.txt",
+    "Delimiter": "\t",
+    "DecimalMarker": ".",
+    "HasHeader": false,
+    "ColumnProperties": [
+      {
+        "ColumnName": "col0",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "col1",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.7531703407441771,
+        "RuntimeInSeconds": 7.395,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e9",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 28,
+            "NumberOfLeaves": 68,
+            "FeatureFraction": 0.9016298,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.75141004024952918,
+        "RuntimeInSeconds": 13.288,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e9",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 68,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.829542637,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.75124227376249109,
+        "RuntimeInSeconds": 3.204,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e9",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 10,
+            "NumberOfLeaves": 5,
+            "FeatureFraction": 0.8522345,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.72854498499611342,
+        "RuntimeInSeconds": 2.953,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e9",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 8,
+            "NumberOfLeaves": 5,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.72611178573015323,
+        "RuntimeInSeconds": 1.8,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e9",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 8,
+            "MinimumExampleCountPerLeaf": 15,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 408,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.13393579665544456,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          },
+          "e9": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "FeaturizeText",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "FastForestOva",
+      "e5": "LbfgsLogisticRegressionOva",
+      "e6": "LbfgsMaximumEntropyMulti",
+      "e7": "SdcaMaximumEntropyMulti",
+      "e8": "SdcaLogisticRegressionOva",
+      "e9": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8) * e9",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "F:\\Selise_Office\\Machine Learning\\myMLApp\\myMLApp\\SentimentModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "col1",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
